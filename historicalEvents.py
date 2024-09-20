@@ -24,8 +24,8 @@ df = df.dropna(subset=['Full Date'])
 fig = px.scatter(
     df,
     x='Full Date',
-    y='Name of Incident', 
-    hover_name='Impact',  
+    y='Impact', 
+    hover_name='Name of Incident',  
     color='Type of Event',  
     title='Historical Events Timeline',
 )
