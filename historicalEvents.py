@@ -40,11 +40,6 @@ df = pd.merge(df, country_year_counts, on=['Country', 'Year'], how='left')
 # Create the Tile Choropleth Map with hover data, including the formatted year
 fig = px.choropleth(
     df,
-    x='Full Date',
-    y='Impact', 
-    hover_name='Name of Incident',  
-    color='Type of Event',  
-    title='Historical Events Timeline',
     locations='Country',  # Ensure this column has the correct country names
     locationmode='country names',
     color='Incident Count',  # Represents the count of incidents
